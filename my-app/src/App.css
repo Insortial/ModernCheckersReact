@@ -1,0 +1,264 @@
+* {
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#title_screen {
+  display: block;
+  z-index: 1;
+}
+
+#checkers_game {
+  display: none;
+}
+
+#checkers_canvas {
+  width: 3840px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+}
+
+#title {
+  grid-area: title;
+  text-align: center;
+  margin: 1em 0 .5em 0;
+  font-size: 4em;
+  color: #C26969;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  letter-spacing: .05em;
+}
+
+#title::first-letter {
+  color: #686565;
+}
+
+#button {
+  display: grid;
+  width: 170px;
+  height: 10vh;
+  min-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  align-self: center;
+  color: white;
+  align-content: center;
+  font-size: 1.5em;
+  transition: color .6s;
+  background: #434343;
+  text-align: center;
+}
+
+#button:hover {
+  color: #C26969;
+  cursor: pointer;
+}
+
+#modalscreen {
+  display: none;
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  align-items: center; 
+  justify-content: center;
+}
+
+#modal {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 240px;
+  background: #F2F2F2;
+  border-radius: 0 0 10px 10px;
+  border-bottom: #C26969 20px solid;
+}
+
+#modalForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#nameLabel {
+  color: #686565;
+  font-size: 2.4em;
+  margin: .5em .7em;
+}
+
+input[type=text] {
+  width: 80%;
+  height: 50px;
+  margin-left: .9em;
+  font-size: 2em;
+  border: none;
+  transition: border .1s;
+}
+
+input[type=text]:focus {
+  border-top: #C26969 3px solid;
+  outline-width: 0;
+}
+
+.submit {
+  width: 40%;
+  align-self: center;
+  margin-top: 1em;
+  height: 60px;
+  background: #434343;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  transition: color .2s;
+}
+
+.submit:hover {
+  cursor: pointer;
+  color: #C26969;
+}
+
+#enter {
+  font-size: 1em;
+  display: none;
+  margin-top: 5em;
+}
+
+/*Checker Game CSS*/
+#checkers_game {
+  display: none;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas: 
+      "score"
+      "board"
+      "menu";
+}
+
+#score {
+  grid-area: score;
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
+  color: #515151;
+}
+
+.players {
+  margin-top: 1em;
+  font-weight: 200;
+  font-family: 'Source Sans Pro';
+}
+
+.players h2 {
+  font-size: 3em;
+  margin: 0 1em;
+}
+
+.players h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+#board_section {
+  display: flex;
+  flex-direction: row;
+  grid-area: board;
+  justify-content: center;
+}
+
+#board {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border: 2px solid black;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  grid-area: menu;
+  background-color: #C26969;
+}
+
+.gam_buttons {
+  width: 60px;
+  height: 60px;
+  border-radius: .5em;
+  background: white;
+  margin: 2em 1.5em;
+  cursor: pointer;
+}
+
+
+@media (min-width: 500px) {
+  #title {
+    font-size: 6em;
+  }
+}
+
+@media (min-width: 1000px) {
+  #title {
+    font-size: 7em;
+    letter-spacing: .1em;
+  }
+
+  #modal {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  #title {
+    font-size: 8em;
+  }
+
+  #modal {
+    width: 30vw
+  } 
+}
+
+@media (min-width: 1920px) {
+  #title {
+    font-size: 9em;
+  }
+
+  #button {
+    width: 250px;
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 2560px) {
+  #title {
+    font-size: 15em;
+    margin-top: 10%;
+  }
+
+  #button {
+    font-size: 2.5em;
+    width: 400px;
+  }
+}
+
+@media (min-width: 3840px) {
+  #title {
+    font-size: 20em;
+    margin-top: 10%;
+  }
+
+  #button {
+    width: 500px;
+    font-size: 4em;
+  }
+}
