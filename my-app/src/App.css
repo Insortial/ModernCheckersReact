@@ -3,6 +3,10 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+body {
+  background-color: #F5F5F5;
+}
+
 #title_screen {
   display: block;
   z-index: 1;
@@ -141,6 +145,7 @@ input[type=text]:focus {
       "score"
       "board"
       "menu";
+  
 }
 
 #score {
@@ -177,11 +182,58 @@ input[type=text]:focus {
   justify-content: center;
 }
 
-#board {
-  position: relative;
-  width: 340px;
-  height: 340px;
-  border: 2px solid black;
+.board {
+  width: 85vw;
+  height: 85vw;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
+.space {
+  height: calc(100% / 8);
+  width: calc(100% / 8);
+}
+
+.space1 {
+  background-color: #bca377;
+}
+
+.space2 {
+  background-color: #ffffff;
+}
+
+.highlight {
+  background-color: #d0d6e0;
+}
+
+.piece {
+  height: calc(100% / 8);
+  width: calc(100% / 8);
+  z-index: 2;
+  border-radius: 100%;
+  background-color: #434343;
+  position: absolute;
+  left: calc((100%/8) * 0);
+  top: calc((100%/8) * 0);
+  transition: left 1s, top 1s
+}
+
+.player1 {
+  background-color: rgb(194, 105, 105);
+}
+
+.player2 {
+  background-color: rgb(67, 67, 67);
+}
+
+.player1active {
+  background-color: rgb(122, 57, 57);
+}
+
+.player2active {
+  background-color: rgb(0, 0, 0)
 }
 
 #footer {
@@ -199,6 +251,8 @@ input[type=text]:focus {
   margin: 2em 1.5em;
   cursor: pointer;
 }
+
+/*Piece and Space Options */
 
 
 @media (min-width: 500px) {

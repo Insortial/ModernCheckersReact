@@ -26,7 +26,9 @@ class CheckersGame extends Component {
                     </span>
                 </section>
                 <section id="board_section">
-                    <CheckersBoard />
+                    <section className="board">
+                        <CheckersBoard />
+                    </section>
                 </section>
                 <section id="footer">
                     <span id="home" className="gam_buttons" onClick={this.props.ChangeScreen}></span>

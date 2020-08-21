@@ -20,12 +20,10 @@ class MainGame extends Component {
     }
     
     ChangeScreen = () => {
-        console.log(this)
         if(!this.gameRef.current.state.active) {
             //Turns on Game Screen
             this.gameRef.current.divRef.current.style.display = 'grid'
             this.gameRef.current.state.active = true
-            console.log(this.player1Name)
             //Attaching Player Names to the div
             this.gameRef.current.player1.current.textContent = this.state.player1Name
             this.gameRef.current.player2.current.textContent = this.state.player2Name
@@ -57,24 +55,17 @@ class MainGame extends Component {
 
     EnterGame = () => {
         if(this.state.player1Name === '' && this.modalRef.current.inputRef.current.value !== '') {
-            console.log(this.modalRef.current.inputRef.current.value)
             const playerName1 = this.modalRef.current.inputRef.current.value
             this.setState({
                 player1Name: playerName1
-            }, function () {
-                console.log(this.state.player1Name)
             })
-            console.log(this.player1Name)
             this.modalRef.current.inputRef.current.value = ''
             this.modalRef.current.labelRef.current.textContent = 'Player 2'
-            console.log(this.player1Name)
         } else if(this.modalRef.current.inputRef.current.value !== '') {
             const playerName2 = this.modalRef.current.inputRef.current.value
             this.setState({
                 player2Name: playerName2,
                 canEnterGame: true
-            }, function () {
-                console.log(this.state.player2Name)
             })
             this.modalRef.current.inputRef.current.value = ''
             this.modalRef.current.labelRef.current.textContent = 'Player 1'
