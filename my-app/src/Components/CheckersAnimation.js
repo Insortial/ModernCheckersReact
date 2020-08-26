@@ -70,7 +70,6 @@ class CheckersAnimation extends Component {
     }
 
     componentDidMount() {
-        console.log(this.canvasRef)
         this.createCanvas()
     }
 

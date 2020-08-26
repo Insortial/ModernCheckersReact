@@ -217,7 +217,7 @@ input[type=text]:focus {
   position: absolute;
   left: calc((100%/8) * 0);
   top: calc((100%/8) * 0);
-  transition: left 1s, top 1s
+  transition: left .5s, top .5s
 }
 
 .player1 {
@@ -234,6 +234,10 @@ input[type=text]:focus {
 
 .player2active {
   background-color: rgb(0, 0, 0)
+}
+
+.king {
+  background-color: yellow;
 }
 
 #footer {
