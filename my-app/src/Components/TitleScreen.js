@@ -19,7 +19,8 @@ class TitleScreen extends Component {
         return (
             <div id="title_screen" ref={this.divRef}>
                 <h1 id="title">CHECKERS</h1>
-                <div id="button" onClick={this.props.EnterModal}>2 PLAYERS</div>
+                <div id="button" onClick={this.props.EnterModal}>LOCAL</div>
+                <div id="button" onClick={this.props.EnterOnlineGame}>ONLINE</div>
                 <CheckersAnimation />
             </div>
         )
