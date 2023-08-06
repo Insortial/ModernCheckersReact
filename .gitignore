@@ -6,10 +6,10 @@ node_modules/
 .pnp.js
 
 # testing
-/coverage
+/my-app/coverage
 
 # production
-/build
+/my-app/build
 
 # misc
 .DS_Store
