@@ -2,7 +2,9 @@ const app = require('express');
 const http = require('http').createServer(app)
 const io = require("socket.io")(http);
 
-
+http.listen(4000, function() {
+  console.log('listening on port 4000')
+})
 
 io.on('connection', socket => {
   console.log('User connected');
@@ -28,8 +30,4 @@ io.on('connection', socket => {
     console.log(newOnlineState.currentRoom)
     socket.broadcast.to(newOnlineState.currentRoom).emit('made-move', { newOnlineState });
   })
-})
-
-http.listen(4000, function() {
-  console.log('listening on port 4000')
 })
